@@ -1,6 +1,3 @@
-# The following lines of boilerplate have to be in your project's CMakeLists
-# in this exact order for cmake to work correctly
-cmake_minimum_required(VERSION 3.5)
-
-include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(twai_network_master)
+idf_component_register(SRCS "twai_network_example_master_main.c"
+                    INCLUDE_DIRS "."
+                    EMBED_FILES "webpage/index.html" "webpage/jquery-3.3.1.min.js" "webpage/main.js")

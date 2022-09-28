@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> BOLT CAN-BMS CHARGER INTEGRATION</title>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script async src="main.js"> </script>
+    </head>
+    <body>
+        <header>
+           <h1>CAN-BMS CHARGER INTEGRATION</h1> 
+        </header>
+        <div id="charger">
+            <h2>Charger detected data:</h2>
+            <label for="battery_voltage_reading" >Battery_Voltage:</label>
+            <div id="battery_voltage_reading"></div>
+            <label for="battery_current_reading" >Battery_current:</label>
+            <div id="battery_current_reading"></div>
+            <label for="charger_state_reading" >Charger_state:</label>
+            <div id="charger_state_reading"></div>
+            <label for="bms_fault_reading" >Bms_fault:</label>
+            <div id="bms_fault_reading"></div>
+        </div>
+            <h2>Enter the data for the charger:</h2>
+            <form action="main.js" method="post">
+                <label for="Battery_vol_msb">Enter the Battery_vol_MSB: </label>
+                <input type="text" id="Battery_vol_msb" name="Battery_vol_msb"><br><br>
+                <label for="Battery_vol_lsb">Enter the Battery_vol_LSB: </label>
+                <input type="text" id="Battery_vol_lsb" name="Battery_vol_lsb"><br><br>
+                <label for="Battery_cur_msb">Enter the Battery_cur_MSB: </label>
+                <input type="text" id="Battery_cur_msb" name="Battery_cur_msb"><br><br>
+                <label for="Battery_cur_lsb">Enter the Battery_cur_LSB: </label>
+                <input type="text" id="Battery_cur_lsb" name="Battery_cur_lsb"><br><br>
+                <label for="charger_state">Enter the Charger_state: </label>
+                <input type="text" id="charger_state" name="charger_state"><br><br>
+                <label for="bms_erros">Enter the BMS_Fault:</label>
+                <input type="text" id="bms_erros" name="bms_erros"><br><br>
+                <button type="button" id="Mybutton" onclick="updateCANdata()">Submit</button>
+            </form>
+                <h2 id="bms_val"> </h2>
+    </body>
+</html>
